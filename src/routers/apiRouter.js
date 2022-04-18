@@ -42,7 +42,7 @@ function buildRouter(config) {
                     if (minutes === undefined) {
                         res.sendStatus(400);
                     } else {
-                        api.startZone(parseInt(req.params.zoneId), minutes);
+                        api.startZone(parseInt(req.params.zoneId), parseInt(minutes));
                         res.sendStatus(200);
                     }
                 })

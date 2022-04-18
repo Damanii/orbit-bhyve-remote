@@ -150,11 +150,11 @@ class API {
             event: "change_mode",
             mode: "manual",
             device_id: this._config.deviceId,
-            timestamp: new Date().toISOString(),
+            timestamp: new Date().toISOString().substring(0,19) + 'Z',
             stations: [
                 { station: zoneId, run_time: minutes }
             ],
-        }));
+        }))
     }
 
     stopZone() {

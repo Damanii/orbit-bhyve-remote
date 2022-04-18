@@ -5,7 +5,7 @@ VOLUME /bhyve
 
 WORKDIR /usr/src/app
 COPY package*.json ./
-
+COPY config.json /bhyve/config 
 # Only include production files
 # RUN npm ci --only=production
 RUN npm i --only=production
